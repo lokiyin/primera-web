@@ -1,13 +1,12 @@
 
 const express = require('express');
 const app = express();
-
 const path = require('path');
-const ejs = require('ejs');
+
 
 //configurations.
-
-
+app.set('port', 3000);
+app.set('view engine', 'ejs');
 //routs
 
 
@@ -16,6 +15,6 @@ app.get('/', (req,res)=>{
 })
 
 // funcion para escuchar el puerto
-app.listen(3000, () => {
-    console.log("server en el puerto", 3000 );
+app.listen(app.set('port'), () => {
+    console.log("server en el puerto", app.set('port') );
 });
