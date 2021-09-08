@@ -3,11 +3,11 @@ const router = express.Router();
 
 
 router.get('/', (req,res)=>{
-    res.render('index');
+    res.render('index.html');
 });
 
 router.get('/cont', (req,res)=>{
-    res.render('cont');
+    res.render('cont.html');
 });
 
 
